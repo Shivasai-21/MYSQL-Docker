@@ -3,14 +3,14 @@
 This project contains a Dockerized MySQL setup with an IPL cricket players dataset.  
 It includes a `Dockerfile` and an `init.sql` script to automatically create the database and populate it with sample player data.
 
----
 
 ## 🚀 Getting Started
 
 ### 1. Build the Docker Image
-```bash
+
 docker build -t dbimage .
-2. Run the MySQL Container
+
+### 2. Run the MySQL Container
 bash
 docker run -d \
   --name db-cont \
@@ -20,7 +20,8 @@ docker run -d \
   -e MYSQL_USER=ipluser \
   -e MYSQL_PASSWORD=iplpassword \
   dbimage
-3. Connect to MySQL
+  
+### 3. Connect to MySQL
 From inside the container:
 
 bash
@@ -29,7 +30,8 @@ From your host machine:
 
 bash
 mysql -h 127.0.0.1 -P 1111 -uipluser -piplpassword IPL_Team
-📂 Project Structure
+
+**📂 Project Structure**
 Code
 SQL-Database/
 │── Dockerfile        # Defines MySQL image with environment variables
@@ -59,7 +61,7 @@ wickets_taken
 
 Sample entries include Virat Kohli, MS Dhoni, Rohit Sharma, Rashid Khan, and more.
 
-🔧 Useful Queries
+**🔧 Useful Queries**
 sql
 -- Show all players
 SELECT * FROM Players;
@@ -74,7 +76,8 @@ LIMIT 3;
 SELECT name, team, wickets_taken
 FROM Players
 WHERE wickets_taken > 100;
-📌 Notes
+
+**📌 Notes**
 Default root password: rootpassword
 
 Default user: ipluser / iplpassword
@@ -83,16 +86,15 @@ Database: IPL_Team
 
 Port mapping: Host 1111 → Container 3306
 
-🤝 Contributing
+**🤝 Contributing**
 Feel free to fork this repo, add more IPL players, or extend the schema with additional stats like strike rate, economy, or captaincy records.
 
 Code
 
----
 
 👉 Just copy this into a file named `README.md` in your project directory, then commit and push:
 
-```bash
+
 git add README.md
 git commit -m "Add README documentation"
 git push
