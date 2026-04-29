@@ -9,7 +9,6 @@ It includes a `Dockerfile` and an `init.sql` script to automatically create the 
 
 ### 1. Build the Docker Image
 ```bash
-
 docker build -t dbimage .
 2. Run the MySQL Container
 bash
@@ -83,3 +82,17 @@ Default user: ipluser / iplpassword
 Database: IPL_Team
 
 Port mapping: Host 1111 → Container 3306
+
+🤝 Contributing
+Feel free to fork this repo, add more IPL players, or extend the schema with additional stats like strike rate, economy, or captaincy records.
+
+Code
+
+---
+
+👉 Just copy this into a file named `README.md` in your project directory, then commit and push:
+
+```bash
+git add README.md
+git commit -m "Add README documentation"
+git push
