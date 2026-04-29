@@ -1,0 +1,11 @@
+# Ignore MySQL data directories
+mysql-data/
+*.log
+*.pid
+*.sock
+
+# Ignore Docker build artifacts
+*.tar
+*.img
+*.tmp
+
